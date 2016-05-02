@@ -4,7 +4,7 @@ import org.hibernate.SessionFactory;
 
 public class DirectorDAO {
 
-	private SessionFactory sessf;
+	private SessionFactory sf;
 
 	public DirectorDAO(SessionFactory sf) {
 		this.sf = sf;
