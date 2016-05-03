@@ -23,7 +23,7 @@ public class Movie {
 	private String title;
 	private String summary;
 	private String gener;
-	private int rating;
+	private double rating;
 	private String year;
 	private String poster;
 
@@ -81,11 +81,11 @@ public class Movie {
 		this.gener = gener;
 	}
 
-	public int getRating() {
+	public double getRating() {
 		return rating;
 	}
 
-	public void setRating(int rating) {
+	public void setRating(double rating) {
 		this.rating = rating;
 	}
 
