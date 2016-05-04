@@ -16,6 +16,7 @@ public class MovieReviewTest extends TestCase {
 	private ActorDAO actorDao;
 	private DirectorDAO directorDao;
 
+	//To test both searchbytitle, addmovies and getAll movies methods
 	public void testsearchByTitle() throws Exception {
 
 		Movie movie = new Movie();
@@ -41,7 +42,7 @@ public class MovieReviewTest extends TestCase {
 		assertEquals("Having fun and loving", newmovie.getPoster());
 		return;
 	}
-
+//test getMovie(int id) method
 	public void testGetMovie() throws Exception {
 
 		Movie movie = movieDao.getMovie(101);
@@ -52,7 +53,7 @@ public class MovieReviewTest extends TestCase {
 		assertEquals("Having fun and loving", movie.getPoster());
 		return;
 	}
-
+//test addActor, getAll actors, and addActor
 	public void testGetAllActors() throws Exception {
 		Actor actor = new Actor();
 
@@ -72,7 +73,7 @@ public class MovieReviewTest extends TestCase {
 		assertEquals("He have acted in many movies", newActor.getBiography());
 		return;
 	}
-
+//teste getActor(int id) 
 	public void testGetActor() throws Exception {
 		Actor actor = actorDao.getActor(1001);
 
@@ -81,7 +82,7 @@ public class MovieReviewTest extends TestCase {
 		assertEquals("He have acted in many movies", actor.getBiography());
 		return;
 	}
-
+	//test addDirector, getAllDirectors, and addDirector
 	public void testgetAllDirectors() throws Exception {
 
 		Director director = new Director();
@@ -101,7 +102,7 @@ public class MovieReviewTest extends TestCase {
 		return;
 
 	}
-
+//test getDirector(int id)
 	public void testGetDirector() throws Exception {
 
 		Director director = directorDao.getDirector(10);
