@@ -8,9 +8,8 @@ import mum.edu.cs544.Domain.Director;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.springframework.transaction.annotation.Transactional;
 
-@Transactional
+
 public class DirectorDAO {
 
 	private SessionFactory sf;

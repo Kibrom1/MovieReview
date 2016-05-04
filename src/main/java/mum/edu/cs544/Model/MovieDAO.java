@@ -7,9 +7,8 @@ import mum.edu.cs544.Domain.Movie;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
-import org.springframework.transaction.annotation.Transactional;
 
-@Transactional
+
 public class MovieDAO {
 
 	private SessionFactory sf;
