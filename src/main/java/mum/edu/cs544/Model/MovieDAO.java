@@ -33,8 +33,8 @@ public class MovieDAO {
 
 		List<Movie> listMovies = new ArrayList<Movie>();
 		try {
-			Query query = sf.getCurrentSession().createQuery("From Movie m");
-			listMovies = query.list();
+			Query sQuery = sf.getCurrentSession().createQuery("From Movie m");
+			listMovies = sQuery.list();
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}

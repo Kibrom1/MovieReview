@@ -25,9 +25,9 @@ public class DirectorDAO {
 		Transaction tx = null;
 		try {
 
-			Query query = sf.getCurrentSession().createQuery(
+			Query sQuery = sf.getCurrentSession().createQuery(
 					"From Director dir");
-			directors = query.list();
+			directors = sQuery.list();
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}

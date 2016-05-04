@@ -5,11 +5,9 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
-import org.springframework.transaction.annotation.Transactional;
-
 import mum.edu.cs544.Domain.Actor;
 
-@Transactional
+
 public class ActorDAO {
 
 	private SessionFactory sf;
@@ -23,8 +21,8 @@ public class ActorDAO {
 		List<Actor> actors = new ArrayList<Actor>();
 
 		try {
-			Query query = sf.getCurrentSession().createQuery("From Actor act");
-			actors = query.list();
+			Query sQuery = sf.getCurrentSession().createQuery("From Actor act");
+			actors = sQuery.list();
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 		}
@@ -42,7 +40,7 @@ public class ActorDAO {
 		}
 	}
 
-	public Actor getArtist(int id) throws Exception {
+	public Actor getActor(int id) throws Exception {
 
 		Actor actor = new Actor();
 		try {
